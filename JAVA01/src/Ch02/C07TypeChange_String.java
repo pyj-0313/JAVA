@@ -34,6 +34,12 @@ public class C07TypeChange_String {
 //		short n6 = Short.parseShort("6");
 //		
 //		System.out.println(n5+n6); 				//11
+		
+		
+		String strValue = "A";
+//		char var = (char)strValue; //애초에 클래스 자료형이기 때문에 사용불가
+		char var = strValue.charAt(0);
+		
 	}
 
 }
