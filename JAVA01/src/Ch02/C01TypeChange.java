@@ -16,12 +16,23 @@ public class C01TypeChange {
 		//byte > short,char > int > long > float > double
 		byte byteValue = 10; 
 		int intValue = byteValue;
-		System.out.println("intValue: " + intValue);
+		System.out.println("intValue: " + intValue); // 10 작은 공간의 값을 큰 공간에 넣는건 문제x 자동형변환
 		
 		char charValue = '가';
 		intValue = charValue;
-		System.out.println("가 의 유니코드: " + intValue);
-			
+		System.out.println("가 의 유니코드: " + intValue); // 44032 작은 공간의 값을 큰 공간에 넣는건 문제x 자동형변환
+	
+		intValue = 50;
+		long longValue = intValue;
+		System.out.println("longValue: " + longValue); // 50 작은 공간의 값을 큰 공간에 넣는건 문제x 자동형변환
+		
+		longValue = 100;
+		float floatValue = longValue;
+		System.out.println("floatValue: " + floatValue); // 100.0 작은 공간의 값을 큰 공간에 넣는건 문제x 자동형변환
+		
+		floatValue = 100.5F;
+		double doubleValue = floatValue;
+		System.out.println("doubleValue: " + doubleValue); //100.5 작은 공간의 값을 큰 공간에 넣는건 문제x 자동형변환
 	}
 
 }
