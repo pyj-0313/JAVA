@@ -23,6 +23,8 @@ int num2 = sc.nextInt();
 
 System.out.print(" 두수의 합 : " + (num1+num2));
 
+sc.close();
+
 
 
 2 Scanner를 이용해서 이름, 주미번호 앞 6자리 , 전화번호를 키보드에서
@@ -54,6 +56,8 @@ System.out.print("3. 전화번호 : ");
 String phone = sc.next();
 
 System.out.printf("이름 : %s\n주민번호 : %s\nPH : %s",name,ssn,phone);
+
+sc.close();
 
 
 
