@@ -12,8 +12,8 @@ public class C06상수 {
 		//1,L : long 자료형
 		//f,F : float 자료형
 		int a = 'a';
-		System.out.println(a);
-		System.out.println(a);
+		System.out.println((int)a);
+		System.out.println((char)a);
 		
 		int n1 = 100; //100은 리터럴 상수
 		final int n2 = 200; //n2는 심볼릭 상수
