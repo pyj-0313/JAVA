@@ -2,19 +2,32 @@ package Ch03;
 
 import java.util.Scanner;
 
+//자동 import Ctrl + Shift + o
+
 public class C01Scanner {
 
 	public static void main(String[] args) {
 		
+		
+		//스트림
+		//System.in 	: 표준 입력 스트림 요청
+		//System.out 	: 표준 출력 스트림 요청
+		
+		
+		//new Scanner(System.in) : 표준 입력 스트림을 연결한 Scanner객체 (웹 개발에서는 스캐너 쓸일이 없다.)
+		//Scanner sc = new Scanner(System.in)
+		// 표준 입력 스트림에 연결된 Scanner객체를 생성한 다음(생성위치 : HEAP)
+		// 해당 객체의 위치값(메모리주소)를 MainStack 영역의 Scanner sc 참조변수에 초기화
+
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.printf("num1 입력 : ");
-		int num1 = sc.nextInt(); // 엔터(\n),스페이스바
+//		System.out.printf("num1 입력 : ");
+		int num1 = sc.nextInt(); //엔터(\n),스페이스바
 		
-		System.out.printf("num2 입력 : ");
+//		System.out.printf("num2 입력 : ");
 		int num2 = sc.nextInt(); //엔터(\n),스페이스바
 		
-		System.out.printf("num3 입력 : ");
+//		System.out.printf("num3 입력 : ");
 		int num3 = sc.nextInt(); //엔터(\n),스페이스바
 		
 		
