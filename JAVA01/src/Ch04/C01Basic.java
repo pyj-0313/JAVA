@@ -1,22 +1,38 @@
 package Ch04;
 
+import java.util.Scanner;
+
 public class C01Basic {
 
 	public static void main(String[] args) {
 		// -------------------------
 		// 기본 산술 연산자
 		// -------------------------
-//		int a = 10, b = 20, c;
-//		System.out.println("a+b="+ (a + b));
-//		System.out.println("a-b="+ (a - b));
-//		System.out.println("a*b="+ (a * b));
-//		System.out.println("b/a="+ (b / a)); //나누기 - 몫
-//		System.out.println("a%b="+ (a % b));//나누기 - 나머지(1.짝홀수구분,2.배수구분,3.자리수제한,4.끝자리구하기)
-//		System.out.println("-a="+ -a);
+		int a = 10, b = 20, c;
+		System.out.println("a+b="+ (a + b));
+		System.out.println("a-b="+ (a - b));
+		System.out.println("a*b="+ (a * b));
+		System.out.println("b/a="+ (b / a)); //나누기 - 몫
+		System.out.println("a%b="+ (a % b));//나누기 - 나머지(1.짝홀수구분,2.배수구분,3.자리수제한,4.끝자리구하기)
+		System.out.println("-a="+ -a);
 
 		// 문제
 //		두수를 입력 받아 두수의 합/차(n1>n2)/곱을 출력하는 프로그램을 만들어보세요
- 
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("첫번째 수 입력 : ");
+		String strNum1 = sc.next();
+		System.out.print("두번째 수 입 력: ");
+		String strNum2 = sc.next();
+		int num1 = Integer.parseInt(strNum1);
+		int num2 = Integer.parseInt(strNum2);
+		int result = num1 + num2;
+		int result2 = num1 - num2;
+		int result3 = num1 * num2;
+		System.out.println("두수의 합 = " + result);
+		System.out.println("두수의 차 = " + result2);
+		System.out.println("두수의 곱 = " + result3);
+		
 
 		// -------------------------
 		// 대입 연산자
