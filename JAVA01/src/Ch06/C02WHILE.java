@@ -426,7 +426,39 @@ public class C02WHILE {
 //		5			0-1			0-2
 //		6			0-2			0-0
 //-------------------------------------
-//		i<=4		j<=i-4		k<=12-(2*i)	
+//		i<7		j<=i-4		k<=12-(2*i)	
+		
+		
+//		int i=0;
+//		while(i<4) {
+//			int j=0;
+//			while(j<3-i) {
+//				System.out.print(" ");
+//				j++;
+//			}
+//			int k=0;
+//			while(k<=2*i) {
+//				System.out.print("*");
+//				k++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+//		while(i<7) {
+//			int j=0;
+//			while(j<=i-4) {
+//				System.out.print(" ");
+//				j++;
+//			}
+//			int k=0;
+//			while(k<=12-(2*i)) {
+//				System.out.print("*");
+//				k++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		
 		
 		
 		
@@ -442,6 +474,64 @@ public class C02WHILE {
 		// *****
 		//  ***
 		//   *	
+		//행(i)		//공백(j)		//별(k)
+//		0			0-2			0-0
+//		1			0-1			0-2
+//		2			0-0			0-4
+//		3			x			0-6
+//-------------------------------------
+//		i=0			j=0			k=0
+//		i++			j++			k++
+//		i<h			j<3-i		k<=2*i
+//-------------------------------------		
+//		4			0-0			0-4
+//		5			0-1			0-2
+//		6			0-2			0-0
+//-------------------------------------
+//		i<h		j<=i-4		k<=12-(2*i)	
+//		Scanner sc = new Scanner(System.in);
+//		int h = sc.nextInt();
+//		int mid = h/2;
+//		
+//		int i=0;
+//		while(i<=mid) {
+//			int j=0;
+//			while(j<mid-i) {
+//				System.out.print(" ");
+//				j++;
+//			}
+//			int k=0;
+//			while(k<=2*i) {
+//				System.out.print("*");
+//				k++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+//		while(i<h) {
+//			int j=0;
+//			while(j<=i-(mid+1)) {
+//				System.out.print(" ");
+//				j++;
+//			}
+//			int k=0;
+//			while(k<=(h-i-1)*2) {
+//				System.out.print("*");
+//				k++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		// 10)
 		// 높이 : 7
@@ -453,6 +543,53 @@ public class C02WHILE {
 		// *****
 		//*******
 		
+		//행(i)		//공백(j)		//별(k)
+//		0			x			0-6
+//		1			0-0 		0-4
+//		2			0-1			0-2
+//		3			0-2			0-0
+//-------------------------------------
+//		i=0			j=0			k=0
+//		i++			j++			k++
+//		i<4			j<i			k<=6-(2*i)
+//-------------------------------------		
+//		4			0-0			0-4
+//		5			0-1			0-2
+//		6			0-2			0-0
+//-------------------------------------
+//		i<7		j<=i-4		k<=12-(2*i)	
+		
+		
+		int i=0;
+		while(i<4) {
+			int j=0;
+			while(j<i) {
+				System.out.print(" ");
+				j++;
+			}
+			int k=0;
+			while(k<=6-(2*i)) {
+			System.out.print("*");
+			k++;
+			}
+			System.out.println();
+			i++;
+			}
+		while(i<7) {
+			int j=0;
+			while(j<6-i) {
+				System.out.print(" ");
+				j++;
+			}
+			int k=0;
+			while(k<=(i-4)*2+2) {
+				System.out.print("*");
+				k++;
+			}
+			
+			System.out.println();
+			i++;
+		}
 		
 		
 		
