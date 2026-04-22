@@ -560,36 +560,36 @@ public class C02WHILE {
 //		i<7		j<=i-4		k<=12-(2*i)	
 		
 		
-		int i=0;
-		while(i<4) {
-			int j=0;
-			while(j<i) {
-				System.out.print(" ");
-				j++;
-			}
-			int k=0;
-			while(k<=6-(2*i)) {
-			System.out.print("*");
-			k++;
-			}
-			System.out.println();
-			i++;
-			}
-		while(i<7) {
-			int j=0;
-			while(j<6-i) {
-				System.out.print(" ");
-				j++;
-			}
-			int k=0;
-			while(k<=(i-4)*2+2) {
-				System.out.print("*");
-				k++;
-			}
-			
-			System.out.println();
-			i++;
-		}
+//		int i=0;
+//		while(i<4) {
+//			int j=0;
+//			while(j<i) {
+//				System.out.print(" ");
+//				j++;
+//			}
+//			int k=0;
+//			while(k<=6-(2*i)) {
+//			System.out.print("*");
+//			k++;
+//			}
+//			System.out.println();
+//			i++;
+//			}
+//		while(i<7) {
+//			int j=0;
+//			while(j<6-i) {
+//				System.out.print(" ");
+//				j++;
+//			}
+//			int k=0;
+//			while(k<=(i-4)*2+2) {
+//				System.out.print("*");
+//				k++;
+//			}
+//			
+//			System.out.println();
+//			i++;
+//		}
 		
 		
 		
