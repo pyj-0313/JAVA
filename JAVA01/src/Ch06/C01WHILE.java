@@ -116,20 +116,45 @@ public class C01WHILE {
 		
 		
 		// 구구단 2 x 1 = 1 , 2 x 9 = 18 찍기
-		// 구구단 N단 받아서 찍어보기
-
+		// 구구단 N단 받아서 찍어보기(n>=2 && n<=9) vs (n<2 || n>9)
+		Scanner sc = new Scanner(System.in);
+		System.out.print("단수를 입력하세요 : ");
+		int n = sc.nextInt();
+		
+		while(n<2 || n>9) {
+			System.out.println("2이상 9이하 값 입력해야 합니다. : ");
+			n=sc.nextInt();
+		}
+		
+//		int i=1;
+//		int dan = n;
+//		while(i<10) {
+//			System.out.printf("%d x %d = %d\t", dan,i,dan*i);
+//			i++;
+//		}
+		// 구구단 역으로 출력
+		int i=9;
+		int dan = n;
+		while(i>0) {
+			System.out.printf("%d x %d = %d\t", dan,i,dan*i);
+			i--;
+		}
+		
+		
+		
+		
 //		Scanner sc = new Scanner(System.in);
 //		int n = sc.nextInt();
-		int dan = 2;
-		while(dan<=9) {
-			int i = 1;
-		while(i<10) {
-			System.out.printf("%d x %d = %d\t", dan,i,dan*i);
-			i++;
-		}
-		System.out.println();
-		dan++;
-		}
+//		int dan = 2;
+//		while(dan<=9) {
+//			int i = 1;
+//		while(i<10) {
+//			System.out.printf("%d x %d = %d\t", dan,i,dan*i);
+//			i++;
+//		}
+//		System.out.println();
+//		dan++;
+//		}
 		
 		
 		
