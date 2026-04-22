@@ -133,16 +133,14 @@ public class C01WHILE {
 //			i++;
 //		}
 		// 구구단 역으로 출력
-		int i=9;
-		int dan = n;
-		while(i>0) {
-			System.out.printf("%d x %d = %d\t", dan,i,dan*i);
-			i--;
-		}
-		
-		
-		
-		
+//		int i=9;
+//		int dan = n;
+//		while(i>0) {
+//			System.out.printf("%d x %d = %d\t", dan,i,dan*i);
+//			i--;
+//		}
+//		
+//		/-------------------------------------------------------
 //		Scanner sc = new Scanner(System.in);
 //		int n = sc.nextInt();
 //		int dan = 2;
