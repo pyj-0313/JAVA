@@ -63,25 +63,44 @@ public class C03CONTINUE_BREAK {
 		//---------------------------------
 		// 모든 반복문 탈출 : EXIT(예약어) = 7 x 7 까지만(dan==7 && i==7)
 		//---------------------------------
-		int dan = 2;
-
+//		int dan = 2;
+//
+//		
+//		Exit:
+//		while(dan<10) {
+//			
+//			int i=1;
+//			while(i<10) {
+//				System.out.printf("%d x %d = %d\n", dan,i,dan*i);
+//				
+//				if(dan==7 && i==7) {
+//
+//					break Exit;
+//				}
+//				i++;
+//			}
+//			System.out.println();
+//			dan++;
+//		}
 		
-		Exit:
-		while(dan<10) {
+		//-------------------------------
+		// continue
+		// 1부터 10까지의 수중에 3의 배수를 제외한 합 출력
+		int i=1;
+		int sum = 0;
+		while(i<=10) {
 			
-			int i=1;
-			while(i<10) {
-				System.out.printf("%d x %d = %d\n", dan,i,dan*i);
-				
-				if(dan==7 && i==7) {
-
-					break Exit;
-				}
+			if(i%3==0) {
 				i++;
+				continue; //while로 다시 올라감, 역행문법들은 가독성이 떨어지므로 안쓰는게 좋다.
 			}
-			System.out.println();
-			dan++;
+			
+			System.out.println("i : " + i);
+			sum+=i;
+			i++;
+			
 		}
+		System.out.println("SUM : " + sum);
 		
 		
 		
