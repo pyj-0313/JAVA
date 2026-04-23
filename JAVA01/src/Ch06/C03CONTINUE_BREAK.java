@@ -60,7 +60,28 @@ public class C03CONTINUE_BREAK {
 //			dan++;
 //		}
 		
+		//---------------------------------
+		// 모든 반복문 탈출 : EXIT(예약어) = 7 x 7 까지만(dan==7 && i==7)
+		//---------------------------------
+		int dan = 2;
 
+		
+		Exit:
+		while(dan<10) {
+			
+			int i=1;
+			while(i<10) {
+				System.out.printf("%d x %d = %d\n", dan,i,dan*i);
+				
+				if(dan==7 && i==7) {
+
+					break Exit;
+				}
+				i++;
+			}
+			System.out.println();
+			dan++;
+		}
 		
 		
 		
