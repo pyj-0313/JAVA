@@ -45,7 +45,6 @@ class C01Person{
 	
 }
 
-
 public class C01정보은닉 {
 
 	public static void main(String[] args) {
