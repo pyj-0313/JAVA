@@ -78,22 +78,22 @@ class Profile
 	}
 	
 
-	// 4) boolean isEquals(String str) {} 완성하기
-	//all로 받은 문자열을 , 단위로 잘라내어(split(",")) 각각 나눠진 문자열이
-	//"name,addr,job,major" 와 일치 하면 true
-	//아니면 false 를 리턴
-//	public boolean isEquals(String all) {
-//		String[] data = all.split(",");
-//		
-//		if(data[0].equals(this.name)&&
-//				data[1].equals(this.addr)&&
-//				data[2].equals(this.job)&&
-//				data[3].equals(this.major)) {
-//			return true;
-//		}else {
-//			return false;
-//		}
-//	}
+	 4) boolean isEquals(String str) {} 완성하기
+	all로 받은 문자열을 , 단위로 잘라내어(split(",")) 각각 나눠진 문자열이
+	"name,addr,job,major" 와 일치 하면 true
+	아니면 false 를 리턴
+	public boolean isEquals(String all) {
+		String[] data = all.split(",");
+		
+		if(data[0].equals(this.name)&&
+				data[1].equals(this.addr)&&
+				data[2].equals(this.job)&&
+				data[3].equals(this.major)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 	
 }
 

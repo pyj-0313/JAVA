@@ -42,7 +42,7 @@ public class C06UpDownCastingMain {
 		
 //		Sub ob5 = (Sub)new Super();
 //		ob5.n1 = 100;
-//		ob5.n2 = 200; //실제 Super에는 n2 공간이 없기 때문에 오류가 나옴
+//		ob5.n2 = 200; //실제 Super에는 n2 공간이 없기 때문에 오류가 나옴 컴파일수준에서는 에러가 안나옴 런타임에러발생
 		
 		Sub down = (Sub)ob4;		//
 		down.n1=100;
