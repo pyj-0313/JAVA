@@ -12,7 +12,7 @@ class Sub extends Super{
 public class C06UpDownCastingMain {
 
 	public static void main(String[] args) {
-		//casting : 형변환
+		//casting : 클래스 형변환
 		
 		//Nocasting : 형변환 x
 		Super ob1 = new Super();
