@@ -17,6 +17,13 @@ class Board{
 	private String LocalDateTime;
 	
 }
+class Product{
+	private int prodNo;
+	String productName;
+	String brandName;
+	int amount;
+}	
+
 
 
 //----------------------
@@ -32,8 +39,15 @@ class BoardRepository extends C05JPARepository<Board,String>{
 	public BoardRepository(Board entity, Class<?> dataType) {
 		super(entity, dataType);
 		// TODO Auto-generated constructor stub
+	}
+}
+class ProductRepository extends C05JPARepository<Product,Integer>{
+	public ProductRepository(Product entity, Class<?> dataType) {
+		super(entity, dataType);
+		// TODO Auto-generated constructor stub
 	}	
 }
+
 
 //----------------------
 //Execute
@@ -43,6 +57,8 @@ public class C05ImplementMain {
 	public static MemberRepository memberRepository = new MemberRepository(new Member(),String.class);
 	//BoardRepository 생성(Board Table생성)
 	public static BoardRepository boardRepository= new BoardRepository(new Board(),Long.class);
+	//ProductRepository 생성(Product Table생성)
+	public static ProductRepository productRepository= new ProductRepository(new Product(),int.class);
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("TEST");
