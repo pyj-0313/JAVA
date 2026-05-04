@@ -9,7 +9,7 @@ public class C02ArrayIndexBoundExceptionMain {
 			System.out.println(arr[0]);
 			System.out.println(arr[1]);
 			System.out.println(arr[2]);
-//			System.out.println(arr[3]);
+			System.out.println(arr[3]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("ArrayIndexOutOfBoundsException 처리!");
 		} finally {
