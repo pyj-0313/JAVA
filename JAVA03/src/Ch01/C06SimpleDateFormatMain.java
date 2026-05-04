@@ -18,6 +18,10 @@ public class C06SimpleDateFormatMain {
 		SimpleDateFormat fmtin = new SimpleDateFormat("yyy/MM/dd");
 		Date date = fmtin.parse(ymd);
 		System.out.println("fmtin : " + date);
+		
+		//포매터 객체 생성(출력용)
+		SimpleDateFormat fmtout = new SimpleDateFormat("yyy~MM~dd");
+		System.out.println(fmtout.format(date));
 	}
 
 }
