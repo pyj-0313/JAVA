@@ -17,7 +17,10 @@ public class C01ListMain {
 		list.add("JSP/SERVLET");
 		list.add("STS");
 		list.add("SPRING BOOT");
-
+		//조회
+		System.out.println("개수 확인 : " + list.size());
+		System.out.println("idx로 조회 : " + list.get(2));
+		System.out.println("Value로 idx확인 : " + list.indexOf("JAVA"));
 		
 	}
 
