@@ -1,6 +1,7 @@
 package Ch04;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class C03SetMain {
@@ -24,6 +25,11 @@ public class C03SetMain {
 		//확인
 		System.out.println("개수 확인 : " + set.size());
 		
+		//탐색(Older) - Iterator 예전방식
+		Iterator<String> iter = set.iterator();
+		while(iter.hasNext()){
+			System.out.println(iter.next());
+		}
 	}
 
 }
