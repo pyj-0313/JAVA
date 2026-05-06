@@ -13,7 +13,10 @@ public class C03SetMain {
 		set.add("SCSS");
 		set.add("REACT");
 		set.add("JAVA");		//older
-
+		
+		//확인
+		System.out.println("개수 확인 : " + set.size());
+		
 	}
 
 }
