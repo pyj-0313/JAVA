@@ -21,7 +21,7 @@ public class C01ListMain {
 		System.out.println("개수 확인 : " + list.size());
 		System.out.println("idx로 조회 : " + list.get(2));
 		System.out.println("Value로 idx확인 : " + list.indexOf("JAVA"));
-		
+		list.forEach(System.out::println);
 	}
 
 }
