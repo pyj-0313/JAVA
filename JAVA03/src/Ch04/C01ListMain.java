@@ -30,7 +30,8 @@ public class C01ListMain {
 		list.remove("JQUERY");
 		System.out.println("---");
 		list.forEach(System.out::println);
-		
+		//전체삭제
+		list.clear();
 		
 	}
 
