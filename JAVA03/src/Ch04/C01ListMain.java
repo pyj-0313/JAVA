@@ -21,7 +21,17 @@ public class C01ListMain {
 		System.out.println("개수 확인 : " + list.size());
 		System.out.println("idx로 조회 : " + list.get(2));
 		System.out.println("Value로 idx확인 : " + list.indexOf("JAVA"));
+		//전체조회
+//		list.forEach((el)->{System.out.println(el);});
+//		list.forEach(el->System.out.println(el));
 		list.forEach(System.out::println);
+		//삭제
+		list.remove(8);
+		list.remove("JQUERY");
+		System.out.println("---");
+		list.forEach(System.out::println);
+		
+		
 	}
 
 }
