@@ -26,10 +26,21 @@ public class C03SetMain {
 		System.out.println("개수 확인 : " + set.size());
 		
 		//탐색(Older) - Iterator 예전방식
-		Iterator<String> iter = set.iterator();
-		while(iter.hasNext()){
-			System.out.println(iter.next());
+//		Iterator<String> iter = set.iterator();
+//		while(iter.hasNext()){
+//			System.out.println(iter.next());
+//		}
+		
+		//탐색(최근) - Iterator 가 이미 내장되어 있다.
+		for(String el : set) {
+			System.out.println(el);
 		}
+		
+		set.clear();	//전체삭제
+		
+		
+		
+		
 	}
 
 }
