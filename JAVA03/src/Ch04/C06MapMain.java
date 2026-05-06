@@ -15,7 +15,9 @@ public class C06MapMain {
 		map.put("aaa",3333);
 		map.put("aaa",4444);		//
 		
-
+		//확인
+		for(String key : map.keySet()) //["aaa","bbb","ccc","ddd"]
+			System.out.println("KEY : " + key + " VALUE : " + map.get(key));
 
 	}
 
