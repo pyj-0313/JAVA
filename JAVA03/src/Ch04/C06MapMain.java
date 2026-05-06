@@ -11,9 +11,9 @@ public class C06MapMain {
 		
 		//추가
 		map.put("aaa",1111);
-		map.put("aaa",2222);
-		map.put("aaa",3333);
-		map.put("aaa",4444);		//
+		map.put("bbb",2222);
+		map.put("ccc",3333);
+		map.put("ddd",4444);		//
 		
 		//확인
 		for(String key : map.keySet()) //["aaa","bbb","ccc","ddd"]
