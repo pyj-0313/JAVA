@@ -13,7 +13,14 @@ public class C03SetMain {
 		set.add("SCSS");
 		set.add("REACT");
 		set.add("JAVA");		//older
+		set.add("JAVA");		//newer(동일한 값이 있을때 나중에 들어온 놈을 적용)
+		set.add("JSP/SERVLET");		
+		set.add("STS");		
+		set.add("SPRING BOOT"); //older		
+		set.add("SPRING BOOT");	//newer(동일한 값이 있을때 나중에 들어온 놈을 적용)
 		
+		//삭제
+		set.remove("REACT");
 		//확인
 		System.out.println("개수 확인 : " + set.size());
 		
