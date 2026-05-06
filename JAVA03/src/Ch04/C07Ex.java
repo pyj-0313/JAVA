@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class C05Ex {
+public class C07Ex {
 	
 	//속성
 	static Map<String,Object> map = new HashMap();
