@@ -2,6 +2,8 @@ package Ch05;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,14 +12,17 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-class C06GUI extends JFrame implements ActionListener
+class C07GUI extends JFrame implements ActionListener,KeyListener
 {
 	JButton btn1;
 	JButton btn2;
 	JButton btn3;
 	JButton btn4;
 	
-	C06GUI(String title){
+	JTextField txt1;
+	JTextArea area1;
+	
+	C07GUI(String title){
 		
 		//Frame Setting
 		super(title);
@@ -34,7 +39,7 @@ class C06GUI extends JFrame implements ActionListener
 		
 		
 		//Component Setting
-		JTextArea area1 = new JTextArea(); 
+		area1 = new JTextArea(); 
 //		area1.setBounds(10,90,210,300);
 		JScrollPane scroll = new JScrollPane(area1);
 		scroll.setBounds(10,10,200,280);
@@ -46,7 +51,7 @@ class C06GUI extends JFrame implements ActionListener
 		btn3 = new JButton("대화기록보기");
 		btn3.setBounds(230,90,120,30);
 		
-		JTextField txt1 = new JTextField();
+		txt1 = new JTextField();
 		txt1.setBounds(10,300,200,30);
 		btn4 = new JButton("입력");
 		btn4.setBounds(230,300,120,30);
@@ -56,6 +61,8 @@ class C06GUI extends JFrame implements ActionListener
 		btn2.addActionListener(this);
 		btn3.addActionListener(this);
 		btn4.addActionListener(this);
+		
+		txt1.addKeyListener(this);
 		
 		//Panel에 Component 추가
 //		panel.add(area1);
@@ -94,13 +101,51 @@ class C06GUI extends JFrame implements ActionListener
 		else if(e.getSource() == btn4)
 		{
 			System.out.println("입력 버튼 클릭");
+			String message = txt1.getText();
+			area1.append(message + "\n");
+			System.out.println("message : " + txt1.getText());
+			txt1.setText("");
+		}
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// -
+//		System.out.println("keyTyped...");
+//		System.out.println("keyTyped..."+e.getKeyChar());
+//		System.out.println("keyTyped..."+e.getKeyCode());
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// 누르는 동안
+//		System.out.println("keyPressed..."+e.getKeyChar());
+//		System.out.println("keyPressed..."+e.getKeyCode());
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// 뗏을 때
+//		System.out.println("keyReleased...");
+//		System.out.println("keyReleased..."+e.getKeyChar());
+//		System.out.println("keyReleased..."+e.getKeyCode());
+		
+		if(e.getSource()==txt1) {
+			if(e.getKeyChar() == 10) {
+				String message = txt1.getText();
+				area1.append(message + "\n");
+				System.out.println("message : " + txt1.getText());
+				txt1.setText("");
+			}
+			
 		}
 		
 	}
 	
 }
-public class C06SwingEventMain {
+public class C07SwingEventMain {
 	public static void main(String[] args) {
-		new C06GUI("Chatting");
+		new C07GUI("Chatting");
 	}
 }
