@@ -27,7 +27,7 @@ public class C01ListMain {
 		list.forEach(System.out::println);
 		//삭제
 		list.remove(0);
-		list.remove("JQUERY");
+		list.remove("REACT");
 		System.out.println("---");
 		list.forEach(System.out::println);
 		//전체삭제
