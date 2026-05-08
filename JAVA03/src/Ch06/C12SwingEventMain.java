@@ -8,6 +8,9 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -124,6 +127,22 @@ class C12GUI extends JFrame implements ActionListener,KeyListener,MouseListener
 					filePath += ".txt";
 				}
 				System.out.println("filePath  : " + filePath);
+				
+				//저장하기
+				Writer out = null;
+				try {
+					out = new FileWriter(filePath);
+					out.write(contents);
+					out.flush();
+					
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				} finally {
+					try {out.close();
+					} catch (IOException e1) {e1.printStackTrace();
+					}
+				}
+
 			}
 			
 		}
