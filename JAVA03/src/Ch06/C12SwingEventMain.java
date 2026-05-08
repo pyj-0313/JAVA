@@ -113,6 +113,10 @@ class C12GUI extends JFrame implements ActionListener,KeyListener,MouseListener
 			//파일탐색기 활성화
 			int selectedVal = fileChooser.showSaveDialog(null);
 			
+			if(selectedVal == JFileChooser.APPROVE_OPTION) {
+				System.out.println("저장 버튼 클릭");
+			}
+			
 		}
 		else if(e.getSource() == btn2)
 		{
