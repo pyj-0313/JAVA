@@ -7,6 +7,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -102,6 +103,12 @@ class C12GUI extends JFrame implements ActionListener,KeyListener,MouseListener
 			JFileChooser fileChooser = new JFileChooser();
 			fileChooser.setDialogTitle("파일 저장 위치를 선택하세요");
 			fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+			
+			//
+			File defaultDirPath = new File("C:\\IOTEST");
+			if(defaultDirPath.exists())
+				fileChooser.setCurrentDirectory(defaultDirPath);
+			
 			
 			//파일탐색기 활성화
 			int selectedVal = fileChooser.showSaveDialog(null);
