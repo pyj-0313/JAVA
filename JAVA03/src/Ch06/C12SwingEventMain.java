@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -100,7 +102,12 @@ class C12GUI extends JFrame implements ActionListener,KeyListener,MouseListener
 		if(e.getSource() == btn1) 
 		{
 			System.out.println("파일로 저장 버튼 클릭");
-			String contents = area1.getText();
+			
+			DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyy-MM-dd HH:mm:ss");
+			String contents = LocalDateTime.now().format(fmt).toString()+"\n";
+			
+			
+			contents += area1.getText();
 			
 			//파일탐색기 열기
 			JFileChooser fileChooser = new JFileChooser();
@@ -138,8 +145,7 @@ class C12GUI extends JFrame implements ActionListener,KeyListener,MouseListener
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				} finally {
-					try {out.close();
-					} catch (IOException e1) {e1.printStackTrace();
+					try {out.close();} catch (IOException e1) {e1.printStackTrace();
 					}
 				}
 
