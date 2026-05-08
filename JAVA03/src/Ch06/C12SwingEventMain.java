@@ -115,6 +115,8 @@ class C12GUI extends JFrame implements ActionListener,KeyListener,MouseListener
 			
 			if(selectedVal == JFileChooser.APPROVE_OPTION) {
 				System.out.println("저장 버튼 클릭");
+				File selectedFile = fileChooser.getSelectedFile();
+				System.out.println("selectedFile : " + selectedFile);
 			}
 			
 		}
