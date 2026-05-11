@@ -35,7 +35,7 @@ public class C02DBInsert {
 			//sql를 dbms 로 전달
 			int result = pstmt.executeUpdate();
 			System.out.println("result : " + result);
-			//결과값으로 java에서 처리
+			//결과값으로 java에서 처리15 DAY - JAVA03(C01DBConn_예외처리)
 			if(result>0)
 				System.out.println("INSERT 성공");
 			else
