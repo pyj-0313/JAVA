@@ -44,6 +44,7 @@ public class C05DBSelect {
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
+			try {rs.close();}catch(Exception e2) {e2.printStackTrace();}
 			try {pstmt.close();}catch(Exception e2) {e2.printStackTrace();}
 			try {conn.close();}catch(Exception e2) {e2.printStackTrace();}
 		}
