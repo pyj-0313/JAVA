@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class C01DBConn {
+public class C02DBInsert {
 
 	public static void main(String[] args) {
 		//DB CONN DATA
@@ -19,14 +19,35 @@ public class C01DBConn {
 		ResultSet rs = null;			// Select 결과물 담을 객체
 		
 		try {
+			//
 			Class.forName("com.mysql.cj.jdbc.Driver"); // 경로를 명시(버전이 올라가면 안해도됨)
 			System.out.println("Driver Loading Success...");
+
+			//
 			conn = DriverManager.getConnection(url,id,pw);
 			System.out.println("DB CONNECTED...");
+			
+			//
+			pstmt = conn.prepareStatement("insert into tbl_a values(?,?)");
+			pstmt.setInt(1, Integer.parseInt(args[0]));
+			pstmt.setString(2,  args[1]);
+			
+			//sql를 dbms 로 전달
+			int result = pstmt.executeUpdate();
+			System.out.println("result : " + result);
+			//결과값으로 java에서 처리
+			if(result>0)
+				System.out.println("INSERT 성공");
+			else
+				System.out.println("INSERT 실패");
+			
+			
+			
 			
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
+			try {pstmt.close();}catch(Exception e2) {e2.printStackTrace();}
 			try {conn.close();}catch(Exception e2) {e2.printStackTrace();}
 		}
 	}
