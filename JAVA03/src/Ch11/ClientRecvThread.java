@@ -6,10 +6,11 @@ import java.io.EOFException;
 public class ClientRecvThread implements Runnable {
 
 	DataInputStream din;
+	Cgui cgui;
 	
-	
-	public ClientRecvThread(DataInputStream din) {
+	public ClientRecvThread(DataInputStream din,Cgui cgui) {
 		this.din = din;
+		this.cgui = cgui;
 	}
 
 	@Override
@@ -30,7 +31,8 @@ public class ClientRecvThread implements Runnable {
 			}
 			if(recv.equals("q"))
 				break;
-			System.out.println("\n[SERVER] : "+recv);
+			System.out.println("\n[SERVER] : "+recv+"\n");
+			cgui.area.append("[SERVER] : "+recv+"\n");
 		}
 	}
 }
