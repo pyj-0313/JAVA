@@ -54,6 +54,7 @@ public class C05추상팩토리패턴 {
     public static void main(String[] args) {
         // 공장 한 줄만 바꾸면 모든 UI가 일관되게 변경됨
         GUIFactory factory = new WinFactory();    // ← MacFactory()로 바꿔보기
+//        GUIFactory factory = new MacFactory();    
 
         Button   btn = factory.createButton();
         CheckBox chk = factory.createCheckBox();
