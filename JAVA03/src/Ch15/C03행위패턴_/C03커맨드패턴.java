@@ -19,7 +19,7 @@ interface Command {
 class TV {
     public void turnOn()  { System.out.println("TV가 켜졌습니다"); }
     public void turnOff() { System.out.println("TV가 꺼졌습니다"); }
-}
+} 
 
 // 3. 구체 명령 클래스들
 class TurnOnCommand implements Command {
