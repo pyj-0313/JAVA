@@ -21,25 +21,25 @@ public class C02ThreadMain {
 		
 		
 		// 2 Thread Class 를 이용한 스레드 분열
-		new Thread() {
-
-			@Override
-			public void run() {
-				
-				for(int i=0;i<5;i++) {
-					System.out.println("TASK03...");
-					try {
-						Thread.sleep(500);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				
-			}
-			
-			
-		}.start();
+//		new Thread() {
+//
+//			@Override
+//			public void run() {
+//				
+//				for(int i=0;i<5;i++) {
+//					System.out.println("TASK03...");
+//					try {
+//						Thread.sleep(500);
+//					} catch (InterruptedException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+//				
+//			}
+//			
+//			
+//		}.start();
 		
 		
 		
