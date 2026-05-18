@@ -8,7 +8,6 @@ public abstract class Gun {
 	int curBuillitCnt;
 	int power;
 	
-	
 	abstract public void fire(Unit unit);
 	abstract public void reload(int bullit);
 

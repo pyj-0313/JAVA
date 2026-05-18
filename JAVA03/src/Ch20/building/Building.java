@@ -11,4 +11,6 @@ public abstract class Building {
 	
 	public abstract void BuildStructure();
 	public abstract void UnderAttack(int damage);
+	
+	
 }

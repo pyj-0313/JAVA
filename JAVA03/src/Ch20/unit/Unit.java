@@ -8,7 +8,8 @@ public abstract class Unit {
 	
 	abstract public void move();
 	abstract public void underAttack(int damage);
-	//getter
+	
+	
 	public int getHp() {
 		return hp;
 	}
@@ -33,6 +34,8 @@ public abstract class Unit {
 	public void setType(String type) {
 		this.type = type;
 	}
+	
+	
 	
 	
 }

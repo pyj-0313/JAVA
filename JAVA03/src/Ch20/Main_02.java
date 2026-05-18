@@ -11,15 +11,17 @@ public class Main_02 {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 		Barrack barrack = new Barrack();
-		Marine m1 = barrack.getMarine();
-		Medic m2 = barrack.getMedic();
+		Marine m1 = barrack.genMarine();
+		Medic m2 = barrack.genMedic();
 		
 		System.out.println(m1);
 		System.out.println(m2);
 		
-		System.out.println("-------------------");
+		System.out.println("----------------");
 		List<Unit> li1 = barrack.genUnit(Class.forName("Ch20.unit.Marine"), 5);
 		li1.forEach((el)->{System.out.println((Marine)el);});
+
+		
 	}
 
 }

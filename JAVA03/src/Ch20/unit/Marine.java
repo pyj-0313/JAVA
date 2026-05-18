@@ -6,7 +6,7 @@ public class Marine extends Unit {
 
 	int base_damage;
 	Gun myGun;
-
+	
 	int attackMethod;
 	
 	public final static int 총기사용=1;
@@ -24,7 +24,6 @@ public class Marine extends Unit {
 		
 	}
 	
-	//getter and setter
 	public int getBase_damage() {
 		return base_damage;
 	}
@@ -40,22 +39,23 @@ public class Marine extends Unit {
 	public void setMyGun(Gun myGun) {
 		this.myGun = myGun;
 	}
+
 	
-	//
 	public void attack(Unit unit) {
 		if(!unit.isDead) {
 			
 			if(this.attackMethod==this.총기사용)
 				myGun.fire(unit);
-			else
+			else 
 				unit.underAttack(this.base_damage);
 			
 		}
 	}
 	
+	
 	@Override
 	public void move() {
-		System.out.println(this.type + " 이 이동합니다");
+		System.out.println(this.type + " 이 이동합니다");		
 	}
 
 	@Override
@@ -70,9 +70,9 @@ public class Marine extends Unit {
 		else {
 			hp=0;amor=0;
 			isDead = true;
-			System.out.println("[경고] "+this.type+"전사했습니다");
+			System.out.println("[경고] "+ this.type +"전사했습니다");
 		}
-			
+		
 	}
 
 }
